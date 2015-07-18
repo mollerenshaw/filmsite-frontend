@@ -15,7 +15,6 @@
   "dependencies": {
     "bootstrap": "~3.3.5",
     "font-awesome": "~4.3.0",
-    "grunt": "~0.4.5",
     "angular.js": "~1.3.15"
   }
 }
