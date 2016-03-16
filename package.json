@@ -2,11 +2,14 @@
   "name": "filmsite-frontend",
   "version": "0.0.1",
   "description": "Frontend static resources for the film site.",
+  "private": "true",
   "scripts": {
+    "start": "node lib/server.js",
     "test": "grunt test"
   },
   "author": "Mark Ollerenshaw",
   "dependencies": {
+    "express": "~4.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
