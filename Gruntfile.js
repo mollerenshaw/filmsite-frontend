@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     watch: {
-      files: ['site/css/less/**/*.less'],
+      files: ['lib/site/css/less/**/*.less'],
       tasks: ['less']
     },
 
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
           paths: ["bower_components"]
         },
         files: {
-          "site/css/styles.css": "site/css/less/styles.less"
+          "lib/site/css/styles.css": "lib/site/css/less/styles.less"
         }
       }
     }
