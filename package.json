@@ -9,8 +9,9 @@
   },
   "author": "Mark Ollerenshaw",
   "dependencies": {
+    "bower": "*",
     "express": "4.13.4",
-    "bower": "*"
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
