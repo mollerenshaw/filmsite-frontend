@@ -14,7 +14,8 @@ module.exports = function (grunt) {
     less: {
       development: {
         options: {
-          paths: ["bower_components"]
+          paths: ["node_modules"],
+          compress: true
         },
         files: {
           "lib/site/css/styles.css": "lib/site/css/less/styles.less"
