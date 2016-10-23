@@ -1,6 +1,7 @@
 
 # These files are generated from LESS, so don't check them in.
 lib/site/css/*.css
+lib/site/js/scripts.js
 
 # VIM swap files.
 *.swp

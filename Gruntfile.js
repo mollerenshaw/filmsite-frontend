@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-browserify');
 
 
   grunt.initConfig({
@@ -10,7 +11,15 @@ module.exports = function (grunt) {
       files: ['lib/site/css/less/**/*.less'],
       tasks: ['less']
     },
-
+    browserify: {
+      dist: {
+        files: {
+          'lib/site/js/scripts.js': ['node_modules/angular-material/angular-material.min.js', 'lib/site/js/**/*.js']
+        },
+        options: {
+        }
+      }
+    },
     less: {
       development: {
         options: {
