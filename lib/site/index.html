@@ -1,85 +1,107 @@
-<!doctype html>
+<html lang="en" >
+   <head>
+      <link rel="stylesheet" href="css/styles.css">
+      <!--
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>-->
+      <script src="js/scripts.js"></script>
+      <script type="text/javascript">    
+         angular.module('firstApplication', ['ngMaterial']);
+      </script>
+   </head>
+   <body ng-app="firstApplication" ng-cloak>
+      <md-toolbar class="md-warn">
+         <div class="md-toolbar-tools">
+            <h2 class="md-flex">HTML 5</h2>
+         </div>
+      </md-toolbar>
 
-<html lang="en" ng-app="StarterApp">
-  <head>
 
-    <title>Films</title>
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Large</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Extra Large</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-xl card-media"></div>
 
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-  </head>
-
-    <body layout="column" ng-controller="AppController as vm">
-  <md-toolbar layout="row">
-    <div class="md-toolbar-tools">
-      <md-button ng-click="vm.toggleSidenav('left')" hide-gt-sm class="md-icon-button">
-        <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">
-        </md-icon>
-      </md-button>
-      <h1>Angular Material: &nbsp; Starter CodePen </h1>
+          <md-card-actions layout="column">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            </md-button>
+          </md-card-actions>
+        </md-card-content>
+      </md-card>
     </div>
-  </md-toolbar>
-  <div layout="row" flex>
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-4dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-      <md-button class="md-accent">Button 1</md-button>
-      <md-button class="md-accent">Button 2</md-button>
-    </md-sidenav>
-    <div layout="column" flex id="content">
-      <md-content layout="column" flex class="md-padding">
-        This Starter Application consists of a Toolbar, SideNav (with two buttons), and Content area.
-        <p>This is the content area! </p>
-      </md-content>
-    </div>
-  </div>
-  <!-- Angular Material Dependencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
-</body>
-    
-    
-<!--  <body class="container-fluid">
-
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Hello</a>
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Medium</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-md card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <div layout layout-padding layout-align="center end" style="height:200px">
+        <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
       </div>
-    </nav>
-
-    <div class="row">
-      <div class="side-spacer"></div>
-      <main class="content-area">
-
-        <div class="hello">
-            <p>To listen to some of the Labour debate today you might think that Tony Blair's election as leader in 1994 was the beginning of the end.
-            As it happened it was not the end, but the prelude to the longest continuous period in power that Labour has ever had - 13 years.
-            But Blair's first conference speech as leader in 1994 is now an emblem of history that much of his party wants to erase.
-            There is no modern equivalent for a cultural shift in a party that has been so quick and so complete.
-            Call yourself a Blairite these days and you might as well be a leper in the Middle Ages ringing a bell to advertise your shame and sending people running from the streets.
-            Why?
-            The simple answer would be Iraq. And there's no doubt that across the Labour Party there's an overwhelming view that the Iraq invasion was a mistake and, most of them think, a deceitful one.
-            Then there's the money attached to the Blair name, which has been damaging too.
-            But even taken together, these factors are not enough to explain the surge of support for Jeremy Corbyn - a candidate who, remember, had to round up proxies to get enough nominations from MPs to get into the leadership contest in the first place.</p>
-        </div>
-
-        <!--<div class="image-grid-row">
-          <div class="image-grid-column">
-            <img src="img/trees.jpg">
-          </div>
-          <div class="image-grid-column">
-
-          </div>
-
-          <div class="image-grid-column">
-
-          </div>
-        </div>
-
-      </main>
-      <div class="side-spacer"></div>
     </div>
- 
-  </body>-->
+  </md-content>
+
+      <!--<md-content flex layout-padding>
+         <p>HTML5 is the next major revision of the HTML standard superseding HTML 4.01, XHTML 1.0, and XHTML 1.1. HTML5 is a standard for structuring and presenting content on the World Wide Web.</p>
+         <p>HTML5 is a cooperation between the World Wide Web Consortium (W3C) and the Web Hypertext Application Technology Working Group (WHATWG).</p>
+         <p>The new standard incorporates features like video playback and drag-and-drop that have been previously dependent on third-party browser plug-ins such as Adobe Flash, Microsoft Silverlight, and Google Gears.</p>
+      </md-content>-->
+   </body>
 </html>
